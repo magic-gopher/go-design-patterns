@@ -1,6 +1,6 @@
 package factory
 
-import "go-design-patterns/simplefactory/coffee"
+import "go-design-patterns/02_simple_factory/coffee"
 
 // CreateCoffee 制作咖啡
 func CreateCoffee(coffeeType int) coffee.Coffee {

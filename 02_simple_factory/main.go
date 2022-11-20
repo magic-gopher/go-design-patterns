@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"go-design-patterns/simplefactory/factory"
+	"go-design-patterns/02_simple_factory/factory"
 )
 
-// 使用方【客户端】
+// 客户端【使用方】
 func main() {
 	coffeeA := factory.CreateCoffee(1)
 	fmt.Println(coffeeA.Info()) // 拿铁咖啡
