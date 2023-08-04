@@ -3,20 +3,21 @@ package singleton
 import "sync"
 
 var (
-	// instance 单例实例变量
+	// singleton指针全局变量
 	instance *singleton
 	// 使函数只执行一次
 	once sync.Once
 )
 
-// singleton 单例结构体
+// singleton 结构体
 type singleton struct {
+	value string
 }
 
-// GetInstance 获取实例函数
+// GetInstance 获取singleton结构体指针函数
 func GetInstance() *singleton {
 	once.Do(func() {
-		instance = &singleton{}
+		instance = &singleton{value: "singleton design"}
 	})
 	return instance
 }
