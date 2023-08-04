@@ -8,12 +8,13 @@ type CoffeeFactory struct {
 }
 
 // CreateCoffee 制作咖啡
-func (cf *CoffeeFactory) CreateCoffee(CafeType string) Coffee {
-	switch CafeType {
+func (cf *CoffeeFactory) CreateCoffee(types string) Coffee {
+	switch types {
 	case "latte":
-		return &LatteCoffee{}
+		return NewLatteCoffee()
 	case "americano":
-		return &AmericanoCoffee{}
+		return NewAmericanoCoffee()
+	default:
+		panic("咖啡类型不存在!")
 	}
-	return nil
 }
