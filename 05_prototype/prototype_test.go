@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+// Test && Benchmark
+
 func TestClone(t *testing.T) {
 	// 山羊
 	p1 := NewGoat()
