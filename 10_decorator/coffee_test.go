@@ -2,6 +2,8 @@ package decorator
 
 import "testing"
 
+// Test && Benchmark
+
 func TestCoffeeDecorator(t *testing.T) {
 	// 创建一个基础咖啡对象
 	coffee := &ConcreteCoffee{}
